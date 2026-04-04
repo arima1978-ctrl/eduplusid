@@ -1,9 +1,7 @@
 name: eduplus 承認チェック
 
 on:
-  schedule:
-    - cron: '0 2 * * *'  # UTC 02:00 = JST 11:00
-  workflow_dispatch:  # 手動実行も可能
+  workflow_dispatch:  # 外部cron (cron-job.org) + 手動実行
 
 jobs:
   approve:
