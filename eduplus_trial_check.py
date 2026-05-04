@@ -10,10 +10,10 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 load_dotenv(os.path.join(SCRIPT_DIR, ".env"), override=True)
 
 TELEGRAM_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
-EDUPLUS_CHAT_ID = int(os.environ.get("EDUPLUS_CHAT_ID", "-5126783705"))
+EDUPLUS_CHAT_ID = int(os.environ["EDUPLUS_CHAT_ID"])
 BASE_MASTER = "https://www.eduplus.jp/eduplus/idreg/master/"
 BASE_JUKU = "https://www.eduplus.jp/eduplus/"
-LOGIN_ID = os.environ.get("EDUPLUS_MASTER_ID", "master1")
+LOGIN_ID = os.environ["EDUPLUS_MASTER_ID"]
 LOGIN_PW = os.environ["EDUPLUS_MASTER_PW"]
 JST = ZoneInfo("Asia/Tokyo")
 TRIAL_MONTHS = 3  # 体験期間の上限
